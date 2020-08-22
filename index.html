@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/jquery.inputmask.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="manifest/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="manifest/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="manifest/favicon-16x16.png">
+  <link rel="manifest" href="manifest/site.webmanifest">
+  <link rel="mask-icon" href="manifest/safari-pinned-tab.svg" color="#4592a8">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://kit.fontawesome.com/79f719a429.js" crossorigin="anonymous"></script>
+  <title>Дмитрий Алексеев</title>
+</head>
+
+<body>
+  <div class="popup-callback">
+    <form action="" method="POST" class="popup-callback__form">
+      <label for="popup-callback__name" class="sr-only" >Ваше имя:</label>
+      <input type="text" name="Имя" placeholder="Ваше имя" id="popup-callback__name" class="popup-callback--input popup-callback__field">
+      <label for="popup-callback__phone" class="sr-only" >Телефон:</label>
+      <input type="tel" name="Телефон" placeholder="+7 (   ) ___-__-__" id="popup-callback__phone" class="popup-callback--input popup-callback__field">
+      <label for="popup-callback__description" class="sr-only" >Описание задачи:</label>
+      <textarea name="Описание" placeholder="Описание задачи" id="popup-callback__description" class="popup-callback--textarea popup-callback__field"></textarea>
+      <label class="popup-callback__file">
+        <input type="file">
+        <span class="button popup-callback__btn-select-file">Выбрать файл</span>
+      </label>
+      <button class="button popup-callback__btn-send">Отправить</button>
+    </form>
+  </div>
+  <header class="header">
+    <div class="fixed-container starting-line">
+      <button class="starting-line__show-menu" aria-label="Открыть меню"></button>
+      <nav class="starting-line__menu menu-header">
+        <ul class="menu-header__list">
+          <li class="menu-header__item"><a class="menu-header__link" href="#services">Услуги</a></li>
+          <li class="menu-header__item"><a class="menu-header__link" href="#portfolio">Портфолио</a></li>
+          <li class="menu-header__item"><a class="menu-header__link" href="#cost">Стоимость</a></li>
+        </ul>
+      </nav>
+      <div class="starting-line__tel tel-header">
+        <a class="tel-header__link" href="tel:+7 499 995 55 77"> +7 (499) 995-55-77</a>
+        <button class="button button--pink tel-header__request-a-call popup-callback__btn-show">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="developer">
+      <div class="fixed-container developer__fixed-container">
+        <div class="developer__container-photo">
+          <picture>
+            <source srcset="img/dmitrii-alekseev-3.png" media="(max-width: 768px)">
+            <source srcset="img/dmitrii-alekseev-1.png" media="(max-width: 1200px)">
+            <img class="developer__photo" src="img/dmitrii-alekseev.png" alt="Дмитрий Алексеев">
+          </picture>
+        </div>
+        <div class="developer__information">
+          <h1 class="developer__name">Дмитрий Алексеев</h1>
+          <p class="developer__profession">Frontend-разработчик и&nbsp;веб-верстальщик</p>
+          <button class="developer__callback popup-callback__btn-show button button--orange">Узнать больше</button>
+        </div>
+      </div>
+      <div class="elements-developer" aria-hidden="true">
+        <span class="elements-developer__item elements-developer__item--1">{}</span>
+        <span class="elements-developer__item elements-developer__item--2">
+          < div>
+        </span>
+        <span class="elements-developer__item elements-developer__item--3">#</span>
+        <span class="elements-developer__item elements-developer__item--4">
+          < />
+        </span>
+        <span class="elements-developer__item elements-developer__item--5">
+          < div>
+        </span>
+        <span class="elements-developer__item elements-developer__item--6">
+          < />
+        </span>
+      </div>
+    </section>
+    <section id="services">
+      <div class="fixed-container services__fixed-container">
+        <h2 class="services__heading">Что я делаю</h2>
+        <ul class="services__list">
+          <li class="services__item services__item--1">
+            Вёрстка лендинг–страниц и сайтов любой сложности
+          </li>
+          <li class="services__item services__item--2">
+            Адаптивная вёрстка под все браузеры и устройства
+          </li>
+          <li class="services__item services__item--3">
+            Frontend–разработка и программирование
+          </li>
+          <li class="services__item services__item--4">
+            Исправление и доработка существующей вёрстки
+          </li>
+        </ul>
+        <button class="button button--orange services__btn-getcost popup-callback__btn-show">Узнать стоимость</button>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="fixed-container portfolio__fixed-container">
+        <h2 class="portfolio__heading">
+          Примеры моих работ
+        </h2>
+        <div class="portfolio__slider slider-portfolio">
+          <ul class="slider-portfolio__list">
+            <li class="slider-portfolio__item">
+              <img src="img/slider/slide-1.jpg" alt="Сайт психолога Веры Антоновой">
+              <p class="slider-portfolio__name">Сайт психолога Веры Антоновой</p>
+            </li>
+            <li class="slider-portfolio__item">
+              <img src="img/slider/slide-2.jpg" alt="Сайт магазина детской одежды">
+              <p class="slider-portfolio__name">Сайт магазина детской одежды</p>
+            </li>
+            <li class="slider-portfolio__item">
+              <img src="img/slider/slide-3.jpg" alt="Сайт магазина «Рыболов»">
+              <p class="slider-portfolio__name">Сайт магазина «Рыболов</p>
+            </li>
+            <li class="slider-portfolio__item">
+              <img src="img/slider/slide-1.jpg" alt="Сайт психолога Веры Антоновой">
+              <p class="slider-portfolio__name">Сайт психолога Веры Антоновой</p>
+            </li>
+            <li class="slider-portfolio__item">
+              <img src="img/slider/slide-2.jpg" alt="Сайт магазина детской одежды">
+              <p class="slider-portfolio__name">Сайт магазина детской одежды</p>
+            </li>
+            <li class="slider-portfolio__item">
+              <img src="img/slider/slide-3.jpg" alt="Сайт магазина «Рыболов»">
+              <p class="slider-portfolio__name">Сайт магазина «Рыболов</p>
+            </li>
+          </ul>
+          <button class="slider-portfolio__button slider-portfolio__button--prev">
+
+          </button>
+          <button class="slider-portfolio__button slider-portfolio__button--next">
+
+          </button>
+          <div class="slider-portfolio__pagination paginator-portfolio" aria-hidden="true">
+
+          </div>
+        </div>
+          <button class="portfolio__order-a-project popup-callback__btn-show button button--orange">
+            Заказать проект
+          </button>
+      </div>
+    </section>
+    <section id="cost">
+      <div class="fixed-container cost__fixed-container">
+        <p class="cost__information">Адаптивная вёрстка под все устройства
+          и&nbsp;браузеры от&nbsp;1000 рублей всего за&nbsp;4&nbsp;часа.*</p>
+        <p class="cost__note">* Срок и&nbsp;стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются
+          индивидуально,
+          в&nbsp;зависимости от&nbsp;сложности задач.</p>
+      </div>
+      <div class="elements-cost" aria-hidden="true">
+        <span class="elements-cost__item elements-cost__item--1">{}</span>
+        <span class="elements-cost__item elements-cost__item--2">#</span>
+        <span class="elements-cost__item elements-cost__item--3">
+          < />
+        </span>
+        <span class="elements-cost__item elements-cost__item--4">{}</span>
+        <span class="elements-cost__item elements-cost__item--5">
+          < div>
+        </span>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="fixed-container footer__fixed-container">
+      <nav class="footer__menu  menu-footer">
+        <ul class="menu-footer__list">
+          <li class="menu-footer__item"><a class="menu-footer__link" href="#services">Услуги</a></li>
+          <li class="menu-footer__item"><a class="menu-footer__link" href="#portfolio">Портфолио</a></li>
+          <li class="menu-footer__item"><a class="menu-footer__link" href="#cost">Стоимость</a></li>
+        </ul>
+      </nav>
+      <address class="footer__contacts  contacts-footer">
+        <a class="contacts-footer__link--tel contacts-footer__link" href="tel:+7 499 995 77 55"><i
+            class="fas fa-phone-alt"></i>+7 (499) 995-77-55</a>
+        <a class="contacts-footer__link--mail contacts-footer__link" href="mailto:dmitry@alekseev.com"><i
+            class="fas fa-envelope"></i>dmitry@alekseev.com</a>
+      </address>
+      <div class="footer__social-networks">
+        <button class="footer__request-a-call popup-callback__btn-show button button--pink">Заказать
+          звонок</button>
+        <ul class="social-networks">
+          <li class="social-networks__item"><a class="social-networks__link social-networks__link--vk"href="#"></a></li>
+          <li class="social-networks__item"><a class="social-networks__link social-networks__link--fb"href="#"></a></li>
+          <li class="social-networks__item"><a class="social-networks__link social-networks__link--twitter" href="#"></a></li>
+          <li class="social-networks__item"><a class="social-networks__link social-networks__link--inst"href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copyright">© Дмитрий Алексеев, 2016 – 2018</p>
+  </footer>
+
+</body>
+
+</html>
