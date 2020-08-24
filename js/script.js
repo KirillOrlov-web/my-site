@@ -2,9 +2,6 @@ $(document).ready(function () {
 
   $('.popup-callback__form').each(function () {
     $(this).validate({
-      errorPlacement(error, element) {
-        //return true;
-      },
       focusInvalid: false,
       rules: {
         Телефон: {
@@ -22,6 +19,21 @@ $(document).ready(function () {
           required: 'Укажите своё имя',
         }
       },
+      submitHandler(form) {
+        let th = $(form);
+
+        $.ajax({
+        type: 'POST',
+        url: '../mail.php',
+        data: th.serialize(),
+        	// eslint-disable-next-line func-names
+      }).done(() => {
+        console.log("Отправлено");
+        th.trigger('reset');
+      });
+
+        return false;
+      }
     });
   });
 

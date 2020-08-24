@@ -109,6 +109,7 @@ img {
 }
 
 .error {
+  color: #fff;
   border: 2px solid #cc0000;
   background-color: #cc0000;
 }

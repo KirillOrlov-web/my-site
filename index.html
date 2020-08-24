@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/jquery.inputmask.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
@@ -24,7 +24,10 @@
 
 <body>
   <div class="popup-callback">
-    <form action="" method="POST" class="popup-callback__form">
+    <form class="popup-callback__form">
+      <input type="hidden" name="project_name" value="Мой сайт">
+      <input type="hidden" name="admin_email" value="kirillorlov-web@mail.ru">
+      <input type="hidden" name="form_subject" value="Заявка с сайта">
       <label for="popup-callback__name" class="sr-only" >Ваше имя:</label>
       <input type="text" name="Имя" placeholder="Ваше имя" id="popup-callback__name" class="popup-callback--input popup-callback__field">
       <label for="popup-callback__phone" class="sr-only" >Телефон:</label>
@@ -35,7 +38,7 @@
         <input type="file">
         <span class="button popup-callback__btn-select-file">Выбрать файл</span>
       </label>
-      <button class="button popup-callback__btn-send">Отправить</button>
+      <button type="submit" class="button popup-callback__btn-send">Отправить</button>
     </form>
   </div>
   <header class="header">
