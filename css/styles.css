@@ -108,11 +108,20 @@ img {
   background-color: #ff4e2e;
 }
 
-.error {
-  color: #fff;
-  border: 2px solid #cc0000;
-  background-color: #cc0000;
+.js-validate-error-field::placeholder {
+  color: red !important;
 }
+.js-validate-error-label {
+  position: absolute;
+  color: #fff !important;
+}
+.popup-callback__form div:nth-of-type(1) {
+  top: 10px;
+}
+.popup-callback__form div:nth-of-type(2) {
+  top: 90px;
+}
+
 
 .popup-callback {
   width: 100%;
@@ -124,7 +133,7 @@ img {
 
 .popup-callback__form {
   width: 550px;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -152,7 +161,7 @@ img {
 }
 .popup-callback__field {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 10px 20px;
   border: 2px solid #ff3493;
   color: #1f1f24;

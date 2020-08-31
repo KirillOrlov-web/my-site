@@ -20,8 +20,6 @@ $(document).ready(function () {
   });
 
 
-  $('#popup-callback__phone').inputmask({ "mask": "+7 (999) 999-99-99" });
-
 
   $('.elements-cost').addClass('elements--active');
   $('.elements-developer').addClass('elements--active');
@@ -95,9 +93,53 @@ $(document).ready(function () {
   handleMatchMedia(mql);
   mql.addListener(handleMatchMedia);
 
+
+  const fileInput = document.querySelector('input[type="file"]');
+
+  fileInput.addEventListener('change', (e) => {
+    let files = e.currentTarget.files;
+    console.log(files);
+
+    if (files.length) {
+      fileInput.closest('label').querySelector('span').textContent = files[0].name;
+    } else {
+      fileInput.closest('label').querySelector('span').textContent = 'Выбрать файл';
+    }
+
+  });
+
+
+  let selector = document.querySelectorAll('input[type="tel"]');
+  let im = new Inputmask('+7 (999) 999-99-99');
+  im.mask(selector);
+
+  let selector2 = document.querySelector('input[type="tel"]');
+
+  selector2.addEventListener('input', function(){
+    console.log(selector2.value)
+
+
+    const re = /^\d*(\.\d+)?$/
+
+    console.log(selector2.value.match(/[0-9]/g).length)
+
+
+    console.log(selector2.value.replace(/[0-9]/g, "0"));
+
+  });
+
+
   let validateForms = function(selector, rules, successModal, yaGoal) {
     new window.JustValidate(selector, {
       rules: rules,
+      messages: {
+        name: {
+          required: 'Укажите имя'
+        },
+        phone: {
+          required: 'Введите телефон'
+        }
+      },
       submitHandler: function(form) {
         let formData = new FormData(form);
 
@@ -116,7 +158,7 @@ $(document).ready(function () {
 
         form.reset();
 
-        fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
+        fileInput.closest('label').querySelector('span').textContent = 'Выбрать файл';
       }
     });
   }

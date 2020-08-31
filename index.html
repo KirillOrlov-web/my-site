@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" href="css/justValidateTooltip.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="apple-touch-icon" sizes="180x180" href="manifest/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="manifest/favicon-32x32.png">
@@ -14,7 +15,7 @@
   <meta name="msapplication-TileColor" content="#2d89ef">
   <meta name="theme-color" content="#ffffff">
   <script src="js/jquery-3.5.1.js"></script>
-  <script src="js/jquery.inputmask.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
   <script src="js/just-validate.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/79f719a429.js" crossorigin="anonymous"></script>
@@ -28,9 +29,9 @@
       <input type="hidden" name="admin_email[]" value="kirillorlov-web@mail.ru">
       <input type="hidden" name="form_subject" value="Заявка с сайта">
       <label for="popup-callback__name" class="sr-only" >Ваше имя:</label>
-      <input type="text" data-validate-field:="name" name="Имя" placeholder="Ваше имя" id="popup-callback__name" class="popup-callback--input popup-callback__field">
+      <input type="text" data-validate-field="name" name="Имя" placeholder="Ваше имя" id="popup-callback__name" class="popup-callback--input popup-callback__field">
       <label for="popup-callback__phone" class="sr-only" >Телефон:</label>
-      <input type="tel" data-validate-field:="phone" name="Телефон" placeholder="+7 (   ) ___-__-__" id="popup-callback__phone" class="popup-callback--input popup-callback__field">
+      <input type="tel" data-validate-field="phone" name="Телефон" placeholder="+7 (   ) ___-__-__" id="popup-callback__phone" class="popup-callback--input popup-callback__field">
       <label for="popup-callback__description" class="sr-only" >Описание задачи:</label>
       <textarea name="Описание" placeholder="Описание задачи" id="popup-callback__description" class="popup-callback--textarea popup-callback__field"></textarea>
       <label class="popup-callback__file">
