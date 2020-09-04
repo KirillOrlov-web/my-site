@@ -148,7 +148,16 @@ $(document).ready(function () {
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-              console.log('Отправлено');
+              $('.popup-callback').css ({
+                'display': 'none'
+              }),
+              $('body').css ({
+                'overflow': 'visible'
+              }),
+              $('.popup-formsent').css ({
+                'animation': 'popup-formsent--is-visible 5s 1'
+              })
+
             }
           }
         }
