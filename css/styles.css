@@ -58,7 +58,8 @@ p {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .fixed-container {
@@ -106,6 +107,22 @@ img {
 .button--pink:hover {
   color: #fff;
   background-color: #ff4e2e;
+}
+
+.js-validate-error-field::-webkit-input-placeholder {
+  color: red !important;
+}
+
+.js-validate-error-field::-moz-placeholder {
+  color: red !important;
+}
+
+.js-validate-error-field:-ms-input-placeholder {
+  color: red !important;
+}
+
+.js-validate-error-field::-ms-input-placeholder {
+  color: red !important;
 }
 
 .js-validate-error-field::placeholder {
@@ -156,7 +173,8 @@ img {
   overflow: hidden;
   white-space: nowrap;
   clip: rect(0 0 0 0);
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
 }
 .popup-callback__field {
   width: 100%;
@@ -176,6 +194,22 @@ img {
 .popup-callback__field:focus {
   border: 2px solid aqua;
   outline: none;
+}
+
+.popup-callback__field::-webkit-input-placeholder {
+  color: #8993ad;
+}
+
+.popup-callback__field::-moz-placeholder {
+  color: #8993ad;
+}
+
+.popup-callback__field:-ms-input-placeholder {
+  color: #8993ad;
+}
+
+.popup-callback__field::-ms-input-placeholder {
+  color: #8993ad;
 }
 
 .popup-callback__field::placeholder {
@@ -223,8 +257,8 @@ img {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: -1;
-  opacity: 0;
+  z-index: 20;
+  display: none;
 }
 .popup-formsent__text {
   position: absolute;
@@ -238,11 +272,17 @@ img {
   color: #fff;
 }
 
-@keyframes popup-formsent--is-visible {
+/*@-webkit-keyframes popup-formsent--is-visible {
   0% {opacity: 0; z-index: -1;}
   50% {opacity: 1; z-index: 20;}
   100% {opacity: 0; z-index: -1;}
 }
+
+@keyframes popup-formsent--is-visible {
+  0% {opacity: 0; z-index: -1;}
+  50% {opacity: 1; z-index: 20;}
+  100% {opacity: 0; z-index: -1;}
+}*/
 
 
 
@@ -402,7 +442,6 @@ img {
 .elements-developer__item {
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  -ms-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(to top, #f26522 0%, #fa0891 99%, #fa0891 100%);
   color: transparent;
@@ -419,7 +458,15 @@ img {
 }
 
 .elements--active .elements-developer__item--1 {
-  animation: position-developer-1 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-developer-1 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-developer-1 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-developer-1 {
+  to {
+    top: 9%;
+    left: 6.5%;
+  }
 }
 
 @keyframes position-developer-1 {
@@ -436,7 +483,15 @@ img {
 }
 
 .elements--active .elements-developer__item--2 {
-  animation: position-developer-2 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-developer-2 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-developer-2 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-developer-2 {
+  to {
+    top: 13%;
+    left: 41%;
+  }
 }
 
 @keyframes position-developer-2 {
@@ -453,7 +508,15 @@ img {
 }
 
 .elements--active .elements-developer__item--3 {
-  animation: position-developer-3 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-developer-3 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-developer-3 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-developer-3 {
+  to {
+    top: 41%;
+    left: 13%;
+  }
 }
 
 @keyframes position-developer-3 {
@@ -470,7 +533,15 @@ img {
 }
 
 .elements--active .elements-developer__item--4 {
-  animation: position-developer-4 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-developer-4 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-developer-4 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-developer-4 {
+  to {
+    top: 84%;
+    left: 20%;
+  }
 }
 
 @keyframes position-developer-4 {
@@ -487,7 +558,15 @@ img {
 }
 
 .elements--active .elements-developer__item--5 {
-  animation: position-developer-5 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-developer-5 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-developer-5 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-developer-5 {
+  to {
+    top: 66%;
+    left: 50%;
+  }
 }
 
 @keyframes position-developer-5 {
@@ -745,6 +824,15 @@ img {
   z-index: 0;
 }
 
+@-webkit-keyframes decor-elements-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes decor-elements-rotate {
   0% {
     transform: rotate(0deg);
@@ -761,7 +849,15 @@ img {
 }
 
 .elements--active .elements-cost__item--1 {
-  animation: position-cost-1 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-cost-1 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-cost-1 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-cost-1 {
+  to {
+    top: 12%;
+    left: 6.5%;
+  }
 }
 
 @keyframes position-cost-1 {
@@ -777,7 +873,15 @@ img {
 }
 
 .elements--active .elements-cost__item--2 {
-  animation: position-cost-2 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-cost-2 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-cost-2 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-cost-2 {
+  to {
+    top: 52%;
+    left: 13%;
+  }
 }
 
 @keyframes position-cost-2 {
@@ -794,7 +898,15 @@ img {
 }
 
 .elements--active .elements-cost__item--3 {
-  animation: position-cost-3 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-cost-3 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-cost-3 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-cost-3 {
+  to {
+    top: 14%;
+    left: 87.4%;
+  }
 }
 
 @keyframes position-cost-3 {
@@ -811,7 +923,15 @@ img {
 }
 
 .elements--active .elements-cost__item--4 {
-  animation: position-cost-4 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-cost-4 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-cost-4 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-cost-4 {
+  to {
+    top: 63%;
+    left: 92.4%;
+  }
 }
 
 @keyframes position-cost-4 {
@@ -828,7 +948,15 @@ img {
 }
 
 .elements--active .elements-cost__item--5 {
-  animation: position-cost-5 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  -webkit-animation: position-cost-5 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+          animation: position-cost-5 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+}
+
+@-webkit-keyframes position-cost-5 {
+  to {
+    top: 72%;
+    left: 75%;
+  }
 }
 
 @keyframes position-cost-5 {
@@ -946,10 +1074,12 @@ img {
 }
 
 .social-networks__link:hover {
-  filter: saturate(40);
+  -webkit-filter: saturate(40);
+          filter: saturate(40);
 }
 .social-networks__link:focus {
-  filter: saturate(40);
+  -webkit-filter: saturate(40);
+          filter: saturate(40);
   transform: scale(1.1);
   outline: none;
 }
@@ -1142,6 +1272,12 @@ img {
     padding-bottom: 26px;
     font-weight: 500;
   }
+  @-webkit-keyframes position-developer-1 {
+    to {
+      top: 12%;
+      left: 14%;
+    }
+  }
   @keyframes position-developer-1 {
     to {
       top: 12%;
@@ -1151,16 +1287,34 @@ img {
   .elements-developer__item--2 {
     letter-spacing: -2px;
   }
+  @-webkit-keyframes position-developer-2 {
+    to {
+      top: 11%;
+      left: 81%;
+    }
+  }
   @keyframes position-developer-2 {
     to {
       top: 11%;
       left: 81%;
     }
   }
+  @-webkit-keyframes position-developer-3 {
+    to {
+      top: 79%;
+      left: 12%;
+    }
+  }
   @keyframes position-developer-3 {
     to {
       top: 79%;
       left: 12%;
+    }
+  }
+  @-webkit-keyframes position-developer-4 {
+    to {
+      top: 73%;
+      left: 37%;
     }
   }
   @keyframes position-developer-4 {
@@ -1176,7 +1330,14 @@ img {
     display: inline;
   }
   .elements--active .elements-developer__item--6 {
-    animation: position-developer-6 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+    -webkit-animation: position-developer-6 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+            animation: position-developer-6 3s linear 0.5s normal forwards, decor-elements-rotate 15s linear infinite normal;
+  }
+  @-webkit-keyframes position-developer-6 {
+    to {
+      top: 24%;
+      left: 43%;
+    }
   }
   @keyframes position-developer-6 {
     to {
@@ -1202,6 +1363,12 @@ img {
   }
   .developer__callback {
     width: 300px;
+  }
+  @-webkit-keyframes position-developer-4 {
+    to {
+      top: 73%;
+      left: 33%;
+    }
   }
   @keyframes position-developer-4 {
     to {
@@ -1252,6 +1419,12 @@ img {
     font-size: 22px;
     line-height: 27px;
   }
+  @-webkit-keyframes position-developer-1 {
+    to {
+      top: 8%;
+      left: 13%;
+    }
+  }
   @keyframes position-developer-1 {
     to {
       top: 8%;
@@ -1263,6 +1436,12 @@ img {
     line-height: 12.83px;
     letter-spacing: 0;
   }
+  @-webkit-keyframes position-developer-2 {
+    to {
+      top: 15%;
+      left: 75%;
+    }
+  }
   @keyframes position-developer-2 {
     to {
       top: 15%;
@@ -1272,6 +1451,12 @@ img {
   .elements-developer__item--3 {
     font-size: 28px;
     line-height: 24.97px;
+  }
+  @-webkit-keyframes position-developer-3 {
+    to {
+      top: 24%;
+      left: 12%;
+    }
   }
   @keyframes position-developer-3 {
     to {
@@ -1283,6 +1468,12 @@ img {
     font-size: 16px;
     line-height: 14.31px;
     letter-spacing: -1px;
+  }
+  @-webkit-keyframes position-developer-4 {
+    to {
+      top: 5%;
+      left: 52%;
+    }
   }
   @keyframes position-developer-4 {
     to {
@@ -1427,6 +1618,12 @@ img {
     font-size: 29px;
     line-height: 25.85px;
   }
+  @-webkit-keyframes position-cost-1 {
+    to {
+      top: 6%;
+      left: 14.5%;
+    }
+  }
   @keyframes position-cost-1 {
     to {
       top: 6%;
@@ -1435,6 +1632,12 @@ img {
   }
   .elements-cost__item--2 {
     display: none;
+  }
+  @-webkit-keyframes position-cost-3 {
+    to {
+      top: 75%;
+      left: 85.5%;
+    }
   }
   @keyframes position-cost-3 {
     to {
@@ -1448,6 +1651,12 @@ img {
   .elements-cost__item--5 {
     font-size: 23px;
     line-height: 21.05px;
+  }
+  @-webkit-keyframes position-cost-5 {
+    to {
+      top: 79%;
+      left: 50%;
+    }
   }
   @keyframes position-cost-5 {
     to {

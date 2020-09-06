@@ -1,18 +1,14 @@
 $(document).ready(function () {
 
   $('.popup-callback__btn-show').on('click', function () {
-    $('.popup-callback').css({
-      'display': 'block'
-    });
+    $('.popup-callback').show(500);
     $('body').css({
       'overflow': 'hidden'
     })
   });
   $('.popup-callback').on('click', function (event) {
     if (event.target == this) {
-      $(this).css({
-        'display': 'none'
-      })
+      $(this).hide(500)
       $('body').css({
         'overflow': 'visible'
       })
@@ -148,15 +144,16 @@ $(document).ready(function () {
         xhr.onreadystatechange = function() {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-              $('.popup-callback').css ({
-                'display': 'none'
-              }),
-              $('body').css ({
-                'overflow': 'visible'
-              }),
-              $('.popup-formsent').css ({
-                'animation': 'popup-formsent--is-visible 5s 1'
-              })
+              $('.popup-callback').hide(500),
+              $('.popup-formsent').show(500),
+              $('.popup-formsent').on('click', function (event) {
+                if (event.target == this) {
+                  $(this).hide(500)
+                  $('body').css({
+                    'overflow': 'visible'
+                  })
+                };
+              });
 
             }
           }
